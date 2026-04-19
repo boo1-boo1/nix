@@ -23,7 +23,7 @@ Managed via Home Manager. Core settings are in `home/core.nix`, with specialized
 - Zsh ([`zshell.nix`](./home/zshell.nix)) + [Starship](https://starship.rs/)
 - [Kitty](https://sw.kovidgoyal.net/kitty/) ([`kitty.nix`](./home/kitty.nix))
 - [Tmux](https://github.com/tmux/tmux/wiki) ([`tmux.nix`](./home/tmux.nix))
-- [Neovim](https://neovim.io/) ([`neovim.nix](./home/neovim.nix))
+- [Neovim](https://neovim.io/) ([`neovim.nix`](./home/neovim.nix))
   - Uses the [Lazyvim](https://github.com/LazyVim/LazyVim) distro
   - Powered by the bleeding-edge [lazyvim-nix](https://github.com/pfassina/lazyvim-nix) flake
 
