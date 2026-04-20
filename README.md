@@ -2,7 +2,7 @@
 
 My personal nix-darwin/NixOS/Home Manager configuration and development environment templates.
 
-## 💻 nix-darwin
+## 🍎 nix-darwin
 
 Manages my macOS configuration including:
 
@@ -11,7 +11,7 @@ Manages my macOS configuration including:
 - [Aerospace](https://nikitabobko.github.io/AeroSpace/guide): The tiling window manager for macOS
 - [a-bar](https://www.jeantinland.com/toolbox/a-bar/): macOS menu bar replacement with support for Aerospace
 
-## NixOS
+## ❄️ NixOS
 
 - A bare minimum NixOS setup for work
 - Uses the KDE Plasma Desktop environment

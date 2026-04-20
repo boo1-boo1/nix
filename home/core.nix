@@ -3,13 +3,6 @@
   ...
 }:
 {
-  imports = [
-    ./zshell.nix
-    ./kitty.nix
-    ./tmux.nix
-    ./neovim.nix
-  ];
-
   home = {
     sessionPath = [ "$HOME/.local/bin" ];
 
