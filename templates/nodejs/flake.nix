@@ -20,13 +20,16 @@
           devShells.default = pkgs.mkShell {
             name = "nodejs";
 
-            packages = with pkgs; [ bun ];
+            packages = with pkgs; [
+              nodejs
+              yarn-berry
+            ];
 
             shellHook = ''
               # check and install dependencies
-              if [ -f package.json ] && [ ! -d node_modules ]; then
+              if [ -f package.json ]; then
                 echo "Installing dependencies..."
-                bun install
+                yarn install
               fi
             '';
           };

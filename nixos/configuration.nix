@@ -19,7 +19,7 @@
   };
 
   networking = {
-    hostName = "nixos";
+    hostName = "nixos-vm";
     networkmanager.enable = true;
   };
 
@@ -46,13 +46,16 @@
   environment.pathsToLink = [ "/share/zsh" ];
 
   services = {
-    xserver.enable = true;
+    xserver = {
+      enable = true;
+      videoDrivers = [ "vmware" ];
+      xkb = {
+        layout = "us";
+        variant = "dvp";
+      };
+    };
     displayManager.sddm.enable = true;
     desktopManager.plasma6.enable = true;
-    xserver.xkb = {
-      layout = "us";
-      variant = "dvp";
-    };
     printing.enable = true;
     pulseaudio.enable = false;
     pipewire = {

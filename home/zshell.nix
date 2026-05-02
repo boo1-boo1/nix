@@ -4,6 +4,12 @@
 }:
 {
   programs = {
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+      presets = [ "jetpack" ];
+    };
+
     zsh = {
       enable = true;
       enableCompletion = true;
@@ -28,6 +34,7 @@
 
       initContent = lib.mkMerge [
         (lib.mkOrder 500 /* bash */ ''
+          # nix-your-shell
           nix-your-shell zsh | source /dev/stdin
         '')
         (lib.mkOrder 1000 /* bash */ ''
@@ -40,10 +47,5 @@
       ];
     };
 
-    starship = {
-      enable = true;
-      enableZshIntegration = true;
-      presets = [ "jetpack" ];
-    };
   };
 }

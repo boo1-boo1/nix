@@ -17,6 +17,7 @@
 
     packages = with pkgs; [
       colorls
+      fzf
     ];
 
     stateVersion = "25.11";
@@ -31,19 +32,6 @@
       nix-direnv.enable = true;
     };
 
-    ssh = {
-      enable = true;
-      enableDefaultConfig = false;
-      matchBlocks = {
-        "github.com" = {
-          addKeysToAgent = "yes";
-          identityFile = "~/.ssh/id_ed25519";
-        };
-      };
-    };
-
-    gpg.enable = true;
-
     git = {
       enable = true;
       settings = {
@@ -56,9 +44,17 @@
       };
     };
 
-    fzf = {
+    gpg.enable = true;
+
+    ssh = {
       enable = true;
-      enableZshIntegration = true;
+      enableDefaultConfig = false;
+      matchBlocks = {
+        "github.com" = {
+          addKeysToAgent = "yes";
+          identityFile = "~/.ssh/id_ed25519";
+        };
+      };
     };
 
     zoxide = {

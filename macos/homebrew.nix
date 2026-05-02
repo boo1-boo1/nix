@@ -10,11 +10,11 @@
       "visual-studio-code"
       "obsidian"
       "zen"
+      "google-chrome"
       "steam"
       "epic-games"
       "the-unarchiver"
       "qbittorrent"
-      "vmware-fusion"
       "protonvpn"
       "whatsapp"
       "vlc"
@@ -27,7 +27,6 @@
     ];
 
     masApps = {
-      # "Xcode" = 497799835;
       "Amphetamine" = 937984704;
     };
 

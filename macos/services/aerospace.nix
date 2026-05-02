@@ -60,7 +60,7 @@
           "if".app-id = "net.kovidgoyal.kitty";
           run = [
             "move-node-to-workspace 1"
-            "workspace 2"
+            "workspace 1"
           ];
         }
         {

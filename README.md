@@ -33,7 +33,7 @@ Reusable environment templates for different languages located in `templates/`:
 
 - **Python**: Python 3 + uv
 - **Rust**: cargo
-- **NodeJS**: bun
+- **NodeJS**: nodejs + yarn v4
 
 ## 🚀 Quick Start
 

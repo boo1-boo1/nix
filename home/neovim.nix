@@ -15,8 +15,6 @@
       enable = true;
 
       extras = {
-        coding.yanky.enable = true;
-
         dap = {
           core.enable = true;
           nlua.enable = true;
@@ -39,13 +37,13 @@
         util = {
           dot.enable = true;
           mini_hipatterns.enable = true;
+          rest.enable = true;
         };
 
         test.core.enable = true;
 
         lang = {
           git.enable = true;
-          haskell.enable = true;
           json.enable = true;
           markdown.enable = true;
           nix.enable = true;
@@ -61,13 +59,6 @@
       extraPackages = with pkgs; [
         bash-language-server
         shfmt
-        haskell-language-server
-        fourmolu
-        hlint
-        haskellPackages.hoogle
-        haskellPackages.fast-tags
-        haskellPackages.haskell-debug-adapter
-        haskellPackages.ghci-dap
         vscode-langservers-extracted
         lua-language-server
         stylua
@@ -86,11 +77,13 @@
         yaml-language-server
         black
         prettier
+        eslint
       ];
 
       treesitterParsers = with pkgs.vimPlugins.nvim-treesitter.grammarPlugins; [
         tmux
         graphql
+        http
       ];
 
       config.keymaps = /* lua */ ''
@@ -103,7 +96,23 @@
         	opts = {
         		servers = {
         			nil_ls = { enabled = false },
-        			nixd = {},
+        			nixd = { enabled = true },
+        		},
+        		diagnostics = {
+        			float = {
+        				border = "rounded",
+        			},
+        		},
+        	},
+        }
+      '';
+
+      plugins.ui = /* lua */ ''
+        return {
+        	"folke/noice.nvim",
+        	opts = {
+        		presets = {
+        			lsp_doc_border = true,
         		},
         	},
         }
@@ -113,13 +122,14 @@
         return {
         	{
         		"catppuccin/nvim",
-            name = "catppuccin",
-            lazy = true,
-            priority = 1000,
+        		name = "catppuccin",
+        		lazy = false,
+        		priority = 1000,
         		opts = {
         			transparent_background = true,
         			float = {
         				transparent = true,
+        				solid = true,
         			},
         		},
         	},
