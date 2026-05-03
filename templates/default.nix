@@ -36,11 +36,11 @@
       # NodeJS Development environment
 
       ## Included tools
-      - bun (runtime and package manager)
+      - nodejs + pnpm
 
       ## Getting Started
       - Run `nix develop`
-      - Run `bun init`
+      - Run `pnpm init`
     '';
   };
 }
