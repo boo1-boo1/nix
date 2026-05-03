@@ -22,14 +22,14 @@
 
             packages = with pkgs; [
               nodejs
-              yarn-berry
+              pnpm
             ];
 
             shellHook = ''
               # check and install dependencies
-              if [ -f package.json ]; then
+              if [ -f package.json ] && [ ! -d node_modules ]; then
                 echo "Installing dependencies..."
-                yarn install
+                pnpm install
               fi
             '';
           };
