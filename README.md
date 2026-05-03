@@ -21,7 +21,8 @@ Manages my macOS configuration including:
 Managed via Home Manager. Core settings are in `home/core.nix`, with specialized configs for:
 
 - Zsh ([`zshell.nix`](./home/zshell.nix)) + [Starship](https://starship.rs/)
-- [Kitty](https://sw.kovidgoyal.net/kitty/) ([`kitty.nix`](./home/kitty.nix))
+- [Kitty](https://sw.kovidgoyal.net/kitty/) ([`kitty.nix`](./home/terminal/kitty.nix))
+- [Ghostty](https://ghostty.org/) ([`ghostty.nix`](./home/terminal/ghostty.nix))
 - [Tmux](https://github.com/tmux/tmux/wiki) ([`tmux.nix`](./home/tmux.nix))
 - [Neovim](https://neovim.io/) ([`neovim.nix`](./home/neovim.nix))
   - Uses the [Lazyvim](https://github.com/LazyVim/LazyVim) distro
