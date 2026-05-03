@@ -20,19 +20,19 @@
 
       gaps = {
         outer = {
-          left = 8;
-          bottom = 8;
-          top = 8;
-          right = 8;
+          left = 12;
+          bottom = 12;
+          top = 12;
+          right = 12;
         };
         inner = {
-          horizontal = 8;
-          vertical = 8;
+          horizontal = 12;
+          vertical = 12;
         };
       };
 
       mode.main.binding = {
-        alt-enter = "exec-and-forget open -b net.kovidgopal.kitty";
+        alt-enter = "exec-and-forget open -b com.mitchellh.ghostty";
         alt-shift-enter = "exec-and-forget open -b app.zen-browser.zen";
 
         alt-f = "fullscreen";
@@ -57,7 +57,7 @@
 
       on-window-detected = [
         {
-          "if".app-id = "net.kovidgoyal.kitty";
+          "if".app-id = "com.mitchellh.ghostty";
           run = [
             "move-node-to-workspace 1"
             "workspace 1"

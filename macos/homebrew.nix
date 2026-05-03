@@ -6,8 +6,8 @@
     ];
 
     casks = [
-      "kitty"
-      "visual-studio-code"
+      "ghostty"
+      "zed"
       "obsidian"
       "zen"
       "google-chrome"

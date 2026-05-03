@@ -2,7 +2,7 @@
   imports = [
     ./core.nix
     ./zshell.nix
-    ./kitty.nix
+    ./terminal
     ./tmux.nix
     ./neovim.nix
   ];

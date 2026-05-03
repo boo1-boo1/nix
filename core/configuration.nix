@@ -3,7 +3,10 @@
 {
   nix = {
     package = pkgs.lixPackageSets.stable.lix;
-    settings.experimental-features = "nix-command flakes";
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
 
   nixpkgs.overlays = [
