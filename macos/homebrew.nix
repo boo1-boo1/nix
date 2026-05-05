@@ -24,6 +24,7 @@
       "session"
       "docker-desktop"
       "a-bar"
+      "claude"
     ];
 
     masApps = {

@@ -18,6 +18,7 @@
     packages = with pkgs; [
       colorls
       fzf
+      nerd-fonts.jetbrains-mono
     ];
 
     stateVersion = "25.11";

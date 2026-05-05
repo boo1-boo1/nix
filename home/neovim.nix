@@ -92,27 +92,18 @@
 
       plugins.lsp = /* lua */ ''
         return {
-        	"neovim/nvim-lspconfig",
-        	opts = {
-        		servers = {
-        			nil_ls = { enabled = false },
-        			nixd = { enabled = true },
-        		},
-        		diagnostics = {
-        			float = {
-        				border = "rounded",
-        			},
-        		},
+        	{
+        		"chrisgrieser/nvim-lsp-endhints",
+        		event = "LspAttach",
+        		opts = {},
         	},
-        }
-      '';
-
-      plugins.ui = /* lua */ ''
-        return {
-        	"folke/noice.nvim",
-        	opts = {
-        		presets = {
-        			lsp_doc_border = true,
+        	{
+        		"neovim/nvim-lspconfig",
+        		opts = {
+        			servers = {
+        				nil_ls = { enabled = false },
+        				nixd = { enabled = true },
+        			},
         		},
         	},
         }
@@ -120,24 +111,9 @@
 
       plugins.colorscheme = /* lua */ ''
         return {
-        	{
-        		"catppuccin/nvim",
-        		name = "catppuccin",
-        		lazy = false,
-        		priority = 1000,
-        		opts = {
-        			transparent_background = true,
-        			float = {
-        				transparent = true,
-        				solid = true,
-        			},
-        		},
-        	},
-        	{
-        		"LazyVim/LazyVim",
-        		opts = {
-        			colorscheme = "catppuccin-mocha",
-        		},
+        	"LazyVim/LazyVim",
+        	opts = {
+        		colorscheme = "catppuccin-mocha",
         	},
         }
       '';

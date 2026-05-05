@@ -12,8 +12,6 @@
     };
     settings = {
       macos_titlebar_color = "background";
-      background_opacity = 0.90;
-      background_blur = 16;
       window_padding_width = 8;
     };
     shellIntegration = {

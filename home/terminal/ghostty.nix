@@ -9,12 +9,10 @@
       font-family = "JetBrainsMono Nerd Font Mono";
       font-size = 14;
       theme = "Catppuccin Mocha";
-      background-opacity = 0.9;
-      background-blur = true;
-      window-decoration = "none";
       window-colorspace = "display-p3";
       window-padding-x = 8;
       window-padding-y = 8;
+      macos-titlebar-style = "hidden";
     };
   };
 }
